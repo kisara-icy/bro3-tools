@@ -3,11 +3,11 @@
 // @namespace	http://at-n2.net/
 // @description	ブラウザ三国志 自動建築スクリプト By nottisan + 5zen（自動内政改良） + RAPT
 // @icon		https://raw.github.com/5zen/fake3gokushi/master/icon.png
-// @include		http://*.3gokushi.jp/*
+// @include		https://*.3gokushi.jp/*
 // @require		http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
 // @require		https://greasemonkey.github.io/gm4-polyfill/gm4-polyfill.js
-// @exclude		http://*.3gokushi.jp/world/select_server_mixi_new.php*
-// @exclude		http://*.3gokushi.jp/maintenance*
+// @exclude		https://*.3gokushi.jp/world/select_server_mixi_new.php*
+// @exclude		https://*.3gokushi.jp/maintenance*
 // @exclude		http://info.3gokushi.jp/*
 // @connect		3gokushi.jp
 // @grant		GM_getValue
@@ -381,7 +381,7 @@ var $e = function(e,t,f) { if (!e) return; e.addEventListener(t, f, false); };
 var $v = function(key) { return d.evaluate(key, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null); };		// 2013.12.18
 
 //LvUPリンク
-var LVUPLINK = "http://SITE/facility/build.php?x=urlX&y=urlY&village_id=viID&ssid=ssid_val#ptop";
+var LVUPLINK = "https://SITE/facility/build.php?x=urlX&y=urlY&village_id=viID&ssid=ssid_val#ptop";
 var URL_SITE = "SITE";
 var URL_X = "urlX";
 var URL_Y = "urlY";
@@ -389,7 +389,7 @@ var URL_viID = "viID";
 var URL_viSSID = "ssid_val";
 
 //新規作成リンク
-var CREATELINK = "http://SITE/facility/build.php?id=fID&x=urlX&y=urlY&village_id=viID&ssid=ssid_val";
+var CREATELINK = "https://SITE/facility/build.php?id=fID&x=urlX&y=urlY&village_id=viID&ssid=ssid_val";
 var URL_fID 	= "fID"; //建物のID
 var HATAKE		= 215;
 var SOUKO		= 233;
@@ -398,11 +398,11 @@ var SYUKUSYA	= 242;	// 宿舎 	2013.12.26
 var RENPEIJYO	= 234;	// 練兵所	2013.12.26
 var KAZIBA		= 232;	// 鍛冶場	2013.12.26
 
-var FACLINK = "http://SITE/facility/facility.php?x=urlX&y=urlY";
-var VILLAGELINK = "http://SITE/village.php#ptop";
+var FACLINK = "https://SITE/facility/facility.php?x=urlX&y=urlY";
+var VILLAGELINK = "https://SITE/village.php#ptop";
 // 2012.04.10
-var LANDLINK = "http://SITE/land.php?x=urlX&y=urlY";
-var SETTLELINK = "http://SITE/facility/select_type.php?x=urlX&y=urlY&mode=build&type=fID";
+var LANDLINK = "https://SITE/land.php?x=urlX&y=urlY";
+var SETTLELINK = "https://SITE/facility/select_type.php?x=urlX&y=urlY&mode=build&type=fID";
 
 var VillageData = new Array();
 var OPT_VILLAGE = new Array();
@@ -488,7 +488,7 @@ var DBG_Flg = false;
 	// 領地画面や建築画面で停止した場合の処理
 	// ５分間止まっていた場合拠点画面に移動する
 	if(location.pathname == "/land.php" || location.pathname == "/facility/facility.php") {
-		setTimeout(function(){location.href = "http://"+HOST+"/village.php";},300000);
+		setTimeout(function(){location.href = "https://"+HOST+"/village.php";},300000);
 	}
 	// =============================================================================================
 	//君主プロフィール画面なら都市画面URLを取得
@@ -565,7 +565,7 @@ var DBG_Flg = false;
 			if (nName[0].length != 12) {
 				// 内政武将がセットされている場合
 				// alert("内政武将は " + nName[0].trim() + " です");
-				j$.get("http://"+HOST+"/card/domestic_setting.php#ptop",function(x){
+				j$.get("https://"+HOST+"/card/domestic_setting.php#ptop",function(x){
 					var htmldoc = document.createElement("html");
 						htmldoc.innerHTML = x;
 					getDomesticSkill(htmldoc);		// 内政スキル使用チェック
@@ -585,7 +585,7 @@ var DBG_Flg = false;
 		} else {
 			try {
 				// 研究所チェック
-				j$.get("http://"+HOST+"/facility/facility.php?x=" + _x + "&y=" + _y ,function(x){
+				j$.get("https://"+HOST+"/facility/facility.php?x=" + _x + "&y=" + _y ,function(x){
 					var htmldoc = document.createElement("html");
 						htmldoc.innerHTML = x;
 					getTrainingSoldier(htmldoc);
@@ -596,7 +596,7 @@ var DBG_Flg = false;
 					if (nName[0].length != 12) {
 						// 内政武将がセットされている場合
 						// alert("内政武将は " + nName[0].trim() + " です");
-						j$.get("http://"+HOST+"/card/domestic_setting.php#ptop",function(x){
+						j$.get("https://"+HOST+"/card/domestic_setting.php#ptop",function(x){
 							var htmldoc = document.createElement("html");
 								htmldoc.innerHTML = x;
 							getDomesticSkill(htmldoc);		// 内政スキル使用チェック
@@ -626,7 +626,7 @@ var DBG_Flg = false;
 
 		//var actionType = TYPE_FACILITY + getParameter("x") + getParameter("y");
 
-		j$.get("http://"+HOST+"/facility/facility.php?x=" + getParameter("x") + "&y=" + getParameter("y") + "#ptop",function(x){
+		j$.get("https://"+HOST+"/facility/facility.php?x=" + getParameter("x") + "&y=" + getParameter("y") + "#ptop",function(x){
 			var htmldoc = document.createElement("html");
 				htmldoc.innerHTML = x;
 			getTrainingSoldier(htmldoc);
@@ -829,7 +829,7 @@ function checkVillageLength() {
 		var tid=setTimeout(function(){
 			GM_xmlhttpRequest({
 				method:"GET",
-				url:"http://" + HOST + "/user/",
+				url:"https://" + HOST + "/user/",
 				headers:{"Content-type":"text/html"},
 				overrideMimeType:'text/html; charset=utf-8',
 				onload:function(x){
@@ -883,7 +883,7 @@ debugLog("=== Start checkVillageLengthDiff ===");
 			setTimeout(function(){
 				GM_xmlhttpRequest({
 					method:"GET",
-					url:"http://" + HOST + "/user/",
+					url:"https://" + HOST + "/user/",
 					headers:{"Content-type":"text/html"},
 					overrideMimeType:'text/html; charset=utf-8',
 					onload:function(x){
@@ -1279,7 +1279,7 @@ function DeleteFacility(_x,_y){
 				c['y'] = parseInt(_y,10);
 				c['ssid']=tables.snapshotItem(0).value;
 				c['remove']="%E5%BB%BA%E7%89%A9%E3%82%92%E5%A3%8A%E3%81%99";
-				j$.post("http://"+HOST+"/facility/facility.php?x=" + _x + "&y=" + _y + "#ptop",c,function(){});
+				j$.post("https://"+HOST+"/facility/facility.php?x=" + _x + "&y=" + _y + "#ptop",c,function(){});
 				var tid=setTimeout(function(){location.reload(false);},INTERVAL);
 
 			}
@@ -1910,7 +1910,7 @@ debugLog("=== Start autoLvup ===");
 								c['x'] = parseInt(_x,10);
 								c['y'] = parseInt(_y,10);
 								c['unit_id'] = parseInt(Buki[0][3],10);
-								j$.post("http://"+HOST+"/facility/facility.php?x=" + parseInt(_x,10) + "&y=" + parseInt(_y,10) + "#ptop",c,function(){});
+								j$.post("https://"+HOST+"/facility/facility.php?x=" + parseInt(_x,10) + "&y=" + parseInt(_y,10) + "#ptop",c,function(){});
 			//					var tid=setTimeout(function(){location.reload(false);},0);
 
 							}
@@ -2083,7 +2083,7 @@ debugLog("=== Start setVillageFacility ===");
 							c['y']=parseInt(Temp[1],10);
 							c['remove']='建物を壊す';
 							c['ssid']=getSessionId();
-						j$.post("http://"+HOST+"/facility/facility.php",c,function(){});
+						j$.post("https://"+HOST+"/facility/facility.php",c,function(){});
 						var tid=setTimeout(function(){location.reload(false);},INTERVAL);
 						return;
 					}
@@ -2191,7 +2191,7 @@ debugLog("=== Start setVillageFacility ===");
 	Reload_Flg = 0;
 
 	// 拠点の状況を調査（削除中なら処理しない）
-	j$.get("http://"+HOST+"/facility/facility.php?x=3&y=3#ptop",function(x){
+	j$.get("https://"+HOST+"/facility/facility.php?x=3&y=3#ptop",function(x){
 		var htmldoc = document.createElement("html");
 			htmldoc.innerHTML = x;
 		var rmtime = htmldoc.innerHTML.match(/(村を削除中です。|砦を削除中です。)[^\d]*(\d+-\d+-\d+ \d+:\d+:\d+)に完了します。/);
@@ -2252,7 +2252,7 @@ debugLog("=== Start setVillageFacility ===");
 						c['y']=parseInt(Temp[1],10);
 						c['village_id']=getVillageID(vId);
 						c['ssid']=getSessionId();
-						j$.post("http://"+HOST+"/facility/build.php",c,function(){});
+						j$.post("https://"+HOST+"/facility/build.php",c,function(){});
 						var tid=setTimeout(function(){location.reload(false);},INTERVAL);
 
 						GM_setValue(HOST+PGNAME+"OPT_BUILD_VID" , getVillageID(vId) );
@@ -2375,7 +2375,7 @@ function createFacility(f, area){
 			c['village_id']=getVillageID(vId);
 			c['id']=f;
 			c['ssid']=getSessionId();
-			j$.post("http://"+HOST+"/facility/build.php",c,function(){});
+			j$.post("https://"+HOST+"/facility/build.php",c,function(){});
 			var tid=setTimeout(function(){location.reload(false);},INTERVAL);
 			return;
 		}
@@ -2457,7 +2457,7 @@ function createFacilityEx(x, y, f, lv, area){
 			c['id']=f;
 		}
 		c['ssid']=getSessionId();
-		j$.post("http://"+HOST+"/facility/build.php",c,function(){});
+		j$.post("https://"+HOST+"/facility/build.php",c,function(){});
 		var tid=setTimeout(function(){location.reload(false);},INTERVAL);
 		return true;
 	}
@@ -6796,7 +6796,7 @@ debugLog("=== Start getSoldier ===");
 
 		GM_xmlhttpRequest({
 			method:"GET",
-			url:"http://" + HOST + "/facility/unit_status.php?type=all",
+			url:"https://" + HOST + "/facility/unit_status.php?type=all",
 			headers:{"Content-type":"text/html"},
 			overrideMimeType:'text/html; charset=utf-8',
 			onload:function(x){
@@ -6878,7 +6878,7 @@ function make_soldier(attackerData){
 						c['y']=parseInt(sort_priority[i][8],10);
 						c['unit_id']=sort_priority[i][1];
 						c['count']=OPT_SOL_ADD[sort_priority[i][1] - 300];
-						j$.post("http://"+HOST+"/facility/facility.php?x=" + sort_priority[i][7] + "&y=" + sort_priority[i][8] + "#ptop",c,function(){});
+						j$.post("https://"+HOST+"/facility/facility.php?x=" + sort_priority[i][7] + "&y=" + sort_priority[i][8] + "#ptop",c,function(){});
 						var tid=setTimeout(function(){location.reload(false);},INTERVAL);
 
 						break;
@@ -7204,7 +7204,7 @@ debugLog("=== Start ichibaChange ===");
 			c['iron']  = Math.floor(RES_NOW["iron"]  * 0.01);
 			c['rice']  = Math.floor(RES_NOW["rice"]  * 0.01);
 			c['contribution'] = 1;
-			j$.post("http://"+HOST+"/alliance/level.php",c,function(){});
+			j$.post("https://"+HOST+"/alliance/level.php",c,function(){});
 			var tid=setTimeout(function(){location.reload(false);},INTERVAL);
 		}
 		return;
@@ -7497,7 +7497,7 @@ function changeResorceToResorceEx(from, tc, to, percent, stock_wood, stock_stone
 	c['x'] = parseInt(x,10);
 	c['y'] = parseInt(y,10);
 
-	j$.post("http://"+HOST+"/facility/facility.php",c,function(){});
+	j$.post("https://"+HOST+"/facility/facility.php",c,function(){});
 	if (reload) {
 		var tid=setTimeout(function(){location.reload(false);},INTERVAL);
 	}
@@ -7540,7 +7540,7 @@ function sendDonate(rice) {
 	var tid=setTimeout(function(){
 		GM_xmlhttpRequest({
 			method:"POST",
-			url:"http://" + HOST + "/alliance/level.php",
+			url:"https://" + HOST + "/alliance/level.php",
 			headers:{"Content-type":"application/x-www-form-urlencoded"},
 			data: data,
 //			onload:function(x){console.log(x.responseText);}
@@ -7555,7 +7555,7 @@ function sendDonate(rice) {
 	c['iron'] = 0;
 	c['rice'] = parseInt(rice,10);
 	c['contribution'] = 1;
-	j$.post("http://"+HOST+"/alliance/level.php",c,function(){});
+	j$.post("https://"+HOST+"/alliance/level.php",c,function(){});
 	var tid=setTimeout(function(){location.reload(false);},INTERVAL);
 }
 
@@ -7569,7 +7569,7 @@ debugLog("=== Start Auto Domestic ===");
 	var tid=setTimeout(function(){
 		GM_xmlhttpRequest({
 			method:"GET",
-			url:"http://" + HOST + "/card/domestic_setting.php",
+			url:"https://" + HOST + "/card/domestic_setting.php",
 			headers:{"Content-type":"text/html"},
 			overrideMimeType:'text/html; charset=utf-8',
 			onload:function(x){
@@ -7590,7 +7590,7 @@ debugLog("=== Start Auto Domestic ===");
 							}while(link.indexOf("&amp;",0) > 1);
 							DomesticFlg    = true;
 
-							GM_xmlhttpRequest({ 	method:"GET", url:"http://" + HOST + link, headers:{"Content-type":"text/html"}, overrideMimeType:'text/html; charset=utf-8',	onload:function(x){
+							GM_xmlhttpRequest({ 	method:"GET", url:"https://" + HOST + link, headers:{"Content-type":"text/html"}, overrideMimeType:'text/html; charset=utf-8',	onload:function(x){
 								debugLog("内政スキル使用");
 								setVillageFacility();		// 拠点建築チェック
 								getSoldier();				// 自動造兵処理
