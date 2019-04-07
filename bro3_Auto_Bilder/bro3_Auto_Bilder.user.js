@@ -6041,6 +6041,7 @@ function getUserProf(htmldoc) {
 
 		//人口項目を取得
 		var popul = trim(getChildElement(item, 2).innerHTML);
+		popul = popul.replace(',','');
 
 		//拠点じゃなければ終了
 		if (!isNumeric(popul)) break;
