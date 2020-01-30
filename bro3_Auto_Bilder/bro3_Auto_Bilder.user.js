@@ -6573,34 +6573,34 @@ function getBuildResources(constructorName, level){
 	'斧兵舎':[
 	  {wood: 170, stone: 450, iron: 246, food: 70, time: 280},//1 確認済み
 	  {wood: 247, stone: 653, iron: 357, food: 102, time: 561},//2 確認済み
-	  {wood: 864, stone: 864, iron: 864, food: 288, time: 864},//3
-	  {wood: 1224, stone: 1224, iron: 1224, food: 648, time: 1728},//4
-	  {wood: 1836, stone: 1836, iron: 1836, food: 972, time: 3456},//5
-	  {wood: 2662, stone: 2662, iron: 2662, food: 1409, time: 5184},//6
-	  {wood: 3860, stone: 3860, iron: 3860, food: 2044, time: 7776},//7
-	  {wood: 7357, stone: 7357, iron: 7357, food: 2452, time: 10886},//8
-	  {wood: 13242, stone: 13242, iron: 13242, food: 4414, time: 15241},//9
-	  {wood: 23836, stone: 23836, iron: 23836, food: 7945, time: 19814},//10
-	  {wood: 42905, stone: 42905, iron: 42905, food: 14302, time: 25757},//11
-	  {wood: 77229, stone: 77229, iron: 77229, food: 25743, time: 33485},//12
-	  {wood: 139013, stone: 139013, iron: 139013, food: 46338, time: 43529},//13
+	  {wood: 370, stone: 979, iron: 535, food: 152, time: 1123},//3 確認済み
+	  {wood: 573, stone: 1517, iron: 829, food: 236, time: 2246},//4 確認済み
+	  {wood: 917, stone: 2427, iron: 1327, food: 378, time: 4492},//5 確認済み
+	  {wood: 1513, stone: 4005, iron: 2189, food: 623 , time: 6739},//6 確認済み
+	  {wood: 2572, stone: 6809, iron: 3722, food: 1059, time: 10108},//7 確認済み
+	  {wood: 4501, stone: 11915, iron: 6514, food: 1853, time: 14151},//8 確認済み
+	  {wood: 8102, stone: 21447, iron: 11724, food: 3336, time: 19813},//9 確認済み
+	  {wood: 14989, stone: 39677, iron: 21690, food: 6172, time: 25758},//10 確認済み
+	  {wood: 28479, stone: 75386, iron: 41211, food: 11727, time: 33484},//11 確認済み
+	  {wood: 77229, stone: 77229, iron: 77229, food: 25743, time: 43530},//12
+	  {wood: 139013, stone: 139013, iron: 139013, food: 46338, time: 56587},//13
 	  {wood: 278026, stone: 278026, iron: 278026, food: 92675, time: 56588},//14
 	  {wood: 556051, stone: 556051, iron: 556051, food: 185350, time: 73615}//15
 	],
 	'双兵舎':[
 	  {wood: 450, stone: 246, iron: 170, food: 70, time: 280},//1 確認済み
 	  {wood: 652, stone: 356, iron: 246, food: 101, time: 561},//2 確認済み
-	  {wood: 864, stone: 864, iron: 864, food: 288, time: 864},//3
-	  {wood: 1224, stone: 1224, iron: 1224, food: 648, time: 1728},//4
-	  {wood: 1836, stone: 1836, iron: 1836, food: 972, time: 3456},//5
-	  {wood: 2662, stone: 2662, iron: 2662, food: 1409, time: 5184},//6
-	  {wood: 3860, stone: 3860, iron: 3860, food: 2044, time: 7776},//7
-	  {wood: 7357, stone: 7357, iron: 7357, food: 2452, time: 10886},//8
-	  {wood: 13242, stone: 13242, iron: 13242, food: 4414, time: 15241},//9
-	  {wood: 23836, stone: 23836, iron: 23836, food: 7945, time: 19814},//10
-	  {wood: 75386, stone: 41211, iron: 28479, food: 11726, time: 33486},//11 確認済み
-	  {wood: 147003 , stone: 80361 , iron: 55534 , food: 22867 , time: 43530},//12 確認済み
-	  {wood: 294006 , stone: 160723 , iron: 111069 , food: 45734 , time: 56587},//13 確認済み
+	  {wood: 978, stone: 535, iron: 369, food: 152, time: 1123},//3 確認済み
+	  {wood: 1517, stone: 829, iron: 573, food: 235, time: 2246},//4 確認済み
+	  {wood: 2427, stone: 1326, iron: 916, food: 377, time: 4492},//5 確認済み
+	  {wood: 4005, stone: 2189, iron: 1513, food: 623, time: 6739},//6 確認済み
+	  {wood: 6808, stone: 3722, iron: 2572, food: 1059, time: 10108},//7 確認済み
+	  {wood: 11915, stone: 6513, iron: 4501, food: 1853, time: 14151},//8 確認済み
+	  {wood: 21447, stone: 11724, iron: 8102, food: 3336, time: 19813},//9 確認済み
+	  {wood: 39676, stone: 21690, iron: 14989, food: 6171, time: 25758},//10 確認済み
+	  {wood: 75386, stone: 41211, iron: 28479, food: 11726, time: 33484},//11 確認済み
+	  {wood: 147003, stone: 80361, iron: 55534, food: 22867, time: 43530},//12 確認済み
+	  {wood: 294006, stone: 160723, iron: 111069, food: 45734, time: 56587},//13 確認済み
 	  {wood: 278026, stone: 278026, iron: 278026, food: 92675, time: 56588},//14
 	  {wood: 556051, stone: 556051, iron: 556051, food: 185350, time: 73615}//15
 	],
@@ -6610,14 +6610,14 @@ function getBuildResources(constructorName, level){
 	  {wood: 535, stone: 369, iron: 978, food: 152, time: 1123},//3 確認済み
 	  {wood: 829, stone: 573, iron: 1517, food: 235, time: 2246},//4 確認済み
 	  {wood: 1326, stone: 916, iron: 2427, food: 377, time: 4492},//5 確認済み
-	  {wood: 2662, stone: 2662, iron: 2662, food: 1409, time: 5184},//6
-	  {wood: 3860, stone: 3860, iron: 3860, food: 2044, time: 7776},//7
-	  {wood: 7357, stone: 7357, iron: 7357, food: 2452, time: 10886},//8
-	  {wood: 13242, stone: 13242, iron: 13242, food: 4414, time: 15241},//9
-	  {wood: 23836, stone: 23836, iron: 23836, food: 7945, time: 19814},//10
-	  {wood: 42905, stone: 42905, iron: 42905, food: 14302, time: 25757},//11
-	  {wood: 77229, stone: 77229, iron: 77229, food: 25743, time: 33485},//12
-	  {wood: 139013, stone: 139013, iron: 139013, food: 46338, time: 43529},//13
+	  {wood: 2189, stone: 1513, iron: 4005, food: 623, time: 6739},//6 確認済み
+	  {wood: 3722, stone: 2572, iron: 6808, food: 1059, time: 10108},//7 確認済み
+	  {wood: 6513, stone: 4501, iron: 11915, food: 1853, time: 14151},//8 確認済み
+	  {wood: 11724, stone: 8102, iron: 21447, food: 3336, time: 19813},//9 確認済み
+	  {wood: 21690, stone: 14989, iron: 39676, food: 6171, time: 25758},//10 確認済み
+	  {wood: 41211, stone: 28479, iron: 75386, food: 11726, time: 33484},//11 確認済み
+	  {wood: 77229, stone: 77229, iron: 77229, food: 25743, time: 43530},//12
+	  {wood: 139013, stone: 139013, iron: 139013, food: 46338, time: 56587},//13
 	  {wood: 278026, stone: 278026, iron: 278026, food: 92675, time: 56588},//14
 	  {wood: 556051, stone: 556051, iron: 556051, food: 185350, time: 73615}//15
 	],
